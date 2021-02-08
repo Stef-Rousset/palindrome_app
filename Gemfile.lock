@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    Stef-Rousset_palindrome (0.1.0)
     ansi (1.5.0)
     builder (3.2.4)
     ffi (1.14.2)
@@ -42,6 +43,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Stef-Rousset_palindrome (~> 0.1.0)
   minitest (= 5.14.2)
   minitest-reporters (= 1.4.2)
   nokogiri (= 1.10.10)
