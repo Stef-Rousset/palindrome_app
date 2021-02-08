@@ -12,17 +12,23 @@ class PalindromeAppTest < Minitest::Test
     assert last_response.ok?
     # assert doc(last_response).css('h1').first # verif qu'il il y a un h1 dans la reponse
     assert doc(last_response).at_css('h1')
+    title_content = doc(last_response).at_css('title').content
+    assert_equal "Learn Enough Ruby Sample App|Home", title_content
   end
 
   def test_about
     get '/about'
     assert last_response.ok?
     assert doc(last_response).at_css('h1')
+    title_content = doc(last_response).at_css('title').content
+    assert_equal "Learn Enough Ruby Sample App|About", title_content
   end
 
   def test_palindrome
     get '/palindrome'
     assert last_response.ok?
     assert doc(last_response).at_css('h1')
+    title_content = doc(last_response).at_css('title').content
+    assert_equal "Learn Enough Ruby Sample App|Palindrome Detector", title_content
   end
 end
